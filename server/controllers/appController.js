@@ -30,7 +30,7 @@ export async function register(req,res){
         // check the existing user
         const existUsername = new Promise((resolve, reject) => {
             UserModel.findOne({ username })
-            .then((err, user) =>{
+            .then((user, err) =>{
                 if(err) reject(new Error(err))
                 if(user) reject({ error : "Please use unique username"});
 
@@ -41,7 +41,7 @@ export async function register(req,res){
         // check for existing email
         const existEmail = new Promise((resolve, reject) => {
             UserModel.findOne({ email })
-            .then((err, email) =>{
+            .then((email, err) =>{
                 if(err) reject(new Error(err))
                 if(email) reject({ error : "Please use unique Email"});
 
