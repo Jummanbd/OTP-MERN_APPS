@@ -1,7 +1,7 @@
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 
-axios.defaults.baseURL = "REACT_APP_SERVER_DOMAIN";
+axios.defaults.baseURL = "https://otp-mern-apps-5t6r.vercel.app/";
 
 
 /** Make API Requests */
